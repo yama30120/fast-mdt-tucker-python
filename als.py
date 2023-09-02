@@ -14,7 +14,7 @@ def als(Y, R):
     d = Y.ndim
 
     # U is factor matrices
-    U = [];
+    U = []
     for n in range(0, d):
         Q, _ = qr(np.random.randn(Y.shape[n], R[n]))
         U.append(np.reshape(Q[:, 0:R[n]], [Y.shape[n], R[n]]))
